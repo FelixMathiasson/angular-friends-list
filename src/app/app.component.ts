@@ -19,4 +19,13 @@ export class AppComponent {
     this.newFriend = null;
   }
 
+  addFavorite(name: string) {
+    if (!this.favorites.includes(name)) {
+      this.favorites.push(name); 
+    }
+  }
+
+  removeFavorite(name: string) {
+    this.favorites = this.favorites.filter(fav => fav !== name);
+  }
 }
